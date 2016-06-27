@@ -12,9 +12,8 @@ import { AppState } from './app.service';
 @Component({
   selector: 'app',
   encapsulation: ViewEncapsulation.None,
-  styles: [
-    require('normalize.css'),
-    require('./app.css')
+  styleUrls: [
+    './app.style.css'
   ],
   template: `
     <md-content>
@@ -40,7 +39,10 @@ import { AppState } from './app.service';
 
       <footer>
         <img [src]="angularclassLogo" width="6%">
-        <span id="footerText">WebPack Angular 2 Starter by <a [href]="url">@AngularClass</a></span>
+          <span id="footerText">
+            WebPack Angular 2 Starter by
+            <a href="https://twitter.com/AngularClass">@AngularClass</a>
+          </span>
       </footer>
       </md-content>
   `
@@ -48,7 +50,6 @@ import { AppState } from './app.service';
 export class App {
   angularclassLogo = 'assets/img/angularclass-avatar.png';
   name = 'Angular 2 Webpack Starter';
-  url = 'https://twitter.com/AngularClass';
 
   constructor(
     public appState: AppState) {
