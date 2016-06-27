@@ -20,15 +20,15 @@ import { AppState } from './app.service';
       <md-toolbar color="primary">
           <span>{{ name }}</span>
           <span class="fill"></span>
-          <button md-button router-active [routerLink]=" ['Index'] ">
+          <a md-button router-active [routerLink]="['index']">
             Index
-          </button>
-          <button md-button router-active [routerLink]=" ['Home'] ">
+          </a>
+          <a md-button router-active [routerLink]="['home']">
             Home
-          </button>
-          <button md-button router-active [routerLink]=" ['About'] ">
+          </a>
+          <a md-button router-active [routerLink]="['about']">
             About
-          </button>
+          </a>
       </md-toolbar>
 
       <md-progress-bar mode="indeterminate" color="primary" *ngIf="loading"></md-progress-bar>
